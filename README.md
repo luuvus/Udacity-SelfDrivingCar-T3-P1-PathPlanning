@@ -19,7 +19,7 @@ The application interate through the sensor fusion data that contain information
 The application aslo check for maneuverable conditions for any accessible lanes adjacent to the target car's lane during the interation of the sensor fusion data. At lines 323-357, the application use the other car's "d" to determine if the other car is in the left or right lanes. Then, it compares the target car's "s" value with other car's "s" value to calculate a reasonable opening space/gap in front and back. The "left_lane_open" and "right_lane_open" variables are set to true if there open space is safe for target car to move into. At lines 361-379, the application will make lane change decision when the target car's has encountered a "too_close" condition.
 
 #### Path Smoothing
-An open source "spline" library is used to calculate smooth a trajactory points by create a three reference anchor (x,y) points that evenly space out at 30m at lines 439-441. Once the anchor points are set to spline library at line 465, the spline can calculate trajactory points between the anchor points while account for curvature of the trajactory path. See lines 349-504 for details.
+An open source "spline" library is used to calculate smooth trajactory points by create three reference anchor (x,y) points that evenly space out at 30m at lines 439-441. Once the anchor points are set to spline library at line 465, the spline can calculate trajactory points between the anchor points while account for curvature of the trajactory path. See lines 349-504 for details.
 
 ## Improvement
 - Refactor the lanes change code into a function

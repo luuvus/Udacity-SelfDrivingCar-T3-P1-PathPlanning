@@ -313,7 +313,7 @@ int main()
 						{
 							// check if the other car is in front of this car and the gap between two cars are too close(less than 20m)
 							// by compare other car's "s" value and this car's "s" value
-							if (other_car_s > car_s && other_car_s - car_s < 20)
+							if (other_car_s > car_s && other_car_s - car_s < 25)
 							{
 								too_close = true;
 							}
@@ -326,7 +326,7 @@ int main()
 							if (other_car_d < (2 + 4 * left_lane + 2) && other_car_d > (2 + 4 * left_lane - 2))
 							{
 								// check for maneuverable condition
-								if (other_car_s > car_s && other_car_s - car_s < 20)
+								if (other_car_s > car_s && other_car_s - car_s < 25)
 								{
 									left_lane_open = false;
 								}
@@ -344,7 +344,7 @@ int main()
 							if (other_car_d < (2 + 4 * right_lane + 2) && other_car_d > (2 + 4 * right_lane - 2))
 							{
 								// check if other car is ahead and spacing is wide enough for movement
-								if (other_car_s > car_s && other_car_s - car_s < 20)
+								if (other_car_s > car_s && other_car_s - car_s < 25)
 								{
 									right_lane_open = false;
 								}
